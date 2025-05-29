@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This is the Head or Navigation Section -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Drip Club</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart(<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!--This the main content section-->
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+
+            <!--filter buttons-->
+            <div class="filters">
+                <button class="filter-btn active" data-category="All Products">All Products</button>
+                <button class="filter-btn" data-category="Woman">Woman</button>
+                <button class="filter-btn" data-category="Men">Men</button>
+                <button class="filter-btn" data-category="Kids">Kids</button>
+                <button class="filter-btn" data-category="Sale">Sale</button>
+            </div>
+
+            <!--This is the product section for JS.-->
+            <div class="product-grid" id="product-grid"></div>
+
+    <!-- This is the footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Drip Club. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+            <h6>Made with ❤️in Mzansi by <strong>MSdev.</strong></h6>
+        </div>
+    </footer>
+    <!-- This is the link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
