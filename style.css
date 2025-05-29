@@ -65,3 +65,42 @@ body{
   border-radius:20px;
   font-size: 14px;
 }
+
+.cart-link:hover {
+    background-color: #164797 !important;
+}
+
+.hero {
+    background: linear-gradient(135deg,#3e88ff, #051a56);
+    color: white;
+    text-align:center;
+    padding: 150px 10px 100px;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2c6eda;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px)
+}
