@@ -4,7 +4,7 @@ const products = [
         name: "Men's Classic T-Shirt",
         price: 225,
         category: "male",
-        image: "https://via.placeholder.com/300x200/3b82f6/white?text=Men%27s+Classic+T-Shirt",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEZ1xmB48Lv4cke6iJoOKlVLLwyDQdzcgOA&s",
         description: "Comfortable cotton t-shirt for everyday wear."
     },
     {
@@ -69,24 +69,25 @@ console.log('JavaScript Loades successfully');
 console.log('We have', products.length, 'products.');
 
 function createProductCard(product) {
-    return`
+    return `
     <div class="product-card">
-        <img src="${product.image}" alt="${product.name}"class="product-image">
+        <img src="${product.image}" alt="${product.name}" class="product-image">
         <div class="product-info"> 
             <h3 class="product-title">${product.name}</h3>
-            <p class="product-description">${product.decription}</p>
-            <div class="product-price'>
+            <p class="product-description">${product.description}</p>
+            <div class="product-price">
                 ${formartPrice(product.price)}      
+            </div>
+            <div class="product-actions">
+                <button class="btn btn-primary btn-small" onclick="addToCart(${product.id})">
+                    Add to Cart
+                </button>
+                <button class="btn btn-secondary btn-small" onclick="viewProduct(${product.id})">
+                    View Details
+                </button>            
+            </div>
         </div>
-        <div class="product-actions">
-            <button class="btn btn-primary btn-small" onclick="addToCart(${product})">
-                Add to Cart
-            </button>
-             <button class="btn btn-secondary btn-small" onclick="viewProduct(${product.id})">
-                View Details
-            </button>            
-        </div>
-    </div>`
+    </div>`;
 }
 
 function displayProducts(productsToShow = products) {
