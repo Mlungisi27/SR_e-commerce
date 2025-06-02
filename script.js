@@ -97,6 +97,14 @@ function displayProducts(productsToShow = products) {
     }
 }
 
+function addToCart(productId) {
+    alert('Product ${productId} added to cart! ');
+}
+
+function viewProduct(productId) {
+    const product = products.find(prod => prod.id === productId)
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Page loaded displaying products..');
     displayProducts(products)
