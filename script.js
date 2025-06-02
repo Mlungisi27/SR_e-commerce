@@ -67,3 +67,36 @@ function formartPrice(price) {
 
 console.log('JavaScript Loades successfully');
 console.log('We have', products.length, 'products.');
+
+function createProductCard(product) {
+    return`
+    <div class="product-card">
+        <img src="${product.image}" alt="${product.name}"class="product-image">
+        <div class="product-info"> 
+            <h3 class="product-title">${product.name}</h3>
+            <p class="product-description">${product.decription}</p>
+            <div class="product-price'>
+                ${formartPrice(product.price)}      
+        </div>
+        <div class="product-actions">
+            <button class="btn btn-primary btn-small" onclick="addToCart(${product})">
+                Add to Cart
+            </button>
+             <button class="btn btn-secondary btn-small" onclick="viewProduct(${product.id})">
+                View Details
+            </button>            
+        </div>
+    </div>`
+}
+
+function displayProducts(productsToShow = products) {
+    if (productGrid) {
+        const productHTML = productsToShow.map(createProductCard).join('');
+        productGrid.innerHTML = productHTML; 
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Page loaded displaying products..');
+    displayProducts(products)
+});
