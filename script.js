@@ -12,7 +12,7 @@ const products = [
         name: "Women's Summer Dress",
         price: 245,
         category: "female",
-        image: "https://via.placeholder.com/300x200/f472b6/white?text=Women%27s+Summer+Dress",
+        image: "https://img.ltwebstatic.com/images3_pi/2024/10/08/c0/1728366488638f69475f44ad1c88fa9d4b5ee9acbf_thumbnail_405x.webp",
         description: "Lightweight floral dress perfect for summer."
     },
     {
@@ -20,7 +20,7 @@ const products = [
         name: "Kids' Hoodie",
         price: 230,
         category: "kids",
-        image: "https://via.placeholder.com/300x200/10b981/white?text=Kids%27+Hoodie",
+        image: "https://thefoschini.vtexassets.com/arquivos/ids/187259479-1200-1600?v=638836047864930000&width=1200&height=1600&aspect=true",
         description: "Cozy hoodie for kids, available in multiple colors."
     },
     {
@@ -28,7 +28,7 @@ const products = [
         name: "Men's Jeans (Sale)",
         price: 350,
         category: "sale",
-        image: "https://via.placeholder.com/300x200/f59e0b/white?text=Men%27s+Jeans+Sale",
+        image: "https://lowkalsa.co.za/cdn/shop/files/DSC5899_900x.jpg?v=1746187868",
         description: "Stylish men's jeans at a discounted price."
     },
     {
@@ -36,7 +36,7 @@ const products = [
         name: "Women's Cardigan",
         price: 240,
         category: "female",
-        image: "https://via.placeholder.com/300x200/8b5cf6/white?text=Women%27s+Cardigan",
+        image: "https://thefoschini.vtexassets.com/arquivos/ids/188165090-1200-1600?v=638844076482300000&width=1200&height=1600&aspect=true",
         description: "Soft knit cardigan for layering."
     },
     {
@@ -44,7 +44,7 @@ const products = [
         name: "Kids' Sneakers (Sale)",
         price: 200,
         category: "sale",
-        image: "https://via.placeholder.com/300x200/ec4899/white?text=Kids%27+Sneakers+Sale",
+        image: "https://lamaraparis.com/cdn/shop/files/46170_671795e07829d4.95458166_IMG_5640.jpg?v=1732182130&width=1000",
         description: "Durable sneakers for kids, now on sale."
     }
 ];
