@@ -3,7 +3,7 @@ const products = [
         id: 1,
         name: "Men's Classic T-Shirt",
         price: 225,
-        category: "male",
+        category: "men",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEZ1xmB48Lv4cke6iJoOKlVLLwyDQdzcgOA&s",
         description: "Comfortable cotton t-shirt for everyday wear."
     },
@@ -11,7 +11,7 @@ const products = [
         id: 2,
         name: "Women's Summer Dress",
         price: 245,
-        category: "female",
+        category: "women",
         image: "https://img.ltwebstatic.com/images3_pi/2024/10/08/c0/1728366488638f69475f44ad1c88fa9d4b5ee9acbf_thumbnail_405x.webp",
         description: "Lightweight floral dress perfect for summer."
     },
@@ -35,7 +35,7 @@ const products = [
         id: 5,
         name: "Women's Cardigan",
         price: 240,
-        category: "female",
+        category: "women",
         image: "https://thefoschini.vtexassets.com/arquivos/ids/188165090-1200-1600?v=638844076482300000&width=1200&height=1600&aspect=true",
         description: "Soft knit cardigan for layering."
     },
@@ -98,14 +98,45 @@ function displayProducts(productsToShow = products) {
 }
 
 function addToCart(productId) {
-    alert('Product ${productId} added to cart! ');
+    alert('Product ' + productId + ' added to cart!');
 }
 
 function viewProduct(productId) {
-    const product = products.find(prod => prod.id === productId)
+    const product = products.find(prod => prod.id === productId);
+    alert('Product: ' + product.name +
+        '\nPrice: ' + formartPrice(product.price) +
+        '\nDescription: ' + product.description);
+}
+
+function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
+            // Get the category from the button's data-category attribute
+            const category = this.getAttribute('data-category');
+
+            // Filter products based on category
+            let filteredProducts;
+            if (category === 'all') {
+                filteredProducts = products;
+            } else {
+                filteredProducts = products.filter(product => product.category === category);
+            }
+
+            displayProducts(filteredProducts);
+
+            console.log('Showing', filteredProducts.length, 'products in category:', category);
+        });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Page loaded displaying products..');
-    displayProducts(products)
+    displayProducts(products);
+    setupFilters();
 });
